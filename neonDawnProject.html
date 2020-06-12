@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="description" content="Wzrd's cool website.">
+      <link rel="stylesheet" type="text/css" href="main.css">
+      <title> Wzrd - Neon Dawn</title>
+   </head>
+
+   <body bgcolor="#E6E6FA">
+      <nav>
+         <ul>
+	    <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+	    <li><a href="cv.html">CV</a></li>
+	    <li><a href="projects.html">Projects</a></li>
+         </ul>
+      </nav>
+
+      <h1> Neon Dawn | 24/05/20 </h1>
+      <p> Neon Dawn was the first game I made in the 3D space. I like to think it is a Mirrors Edge / Superhot hybrid; where you're wall running, grappling and taking down enemies as you try to make it to dawn. </p>
+
+      <p align="center"> <iframe width="420" height="235"
+         src="https://www.youtube.com/embed/oJVrWHwzWjo">
+      </iframe> </p>
+
+      <p> As I mentioned in the video, the bits of code I'm most happy with are the utility pieces. The SettingsMaster, MusicManager, LevelChanger and ProgressManager scripts follow a singleton structure
+and are very versatile so I will be sure to take them into my future projects. </p>
+      <p><u> Settings Master: </u></p>
+      <p><a target="_blank" href="https://imgur.com/a/F3vtYfI">SettingsMaster.cs Script</a></p> 
+      <ul>
+         <li> Stores the players data via PlayerPrefs. 
+         <li> Uses a number of static methods for easy getting / setting the values. 
+         <li> Easy intergration with all future SettingsManager (what I like to call the front end of my settings system, ie: the buttons / sliders to actually change the controls / values) scripts. 
+      </ul>
+
+      <p><u> Music Manager: </u></p>
+      <p><a target="_blank" href="https://imgur.com/a/1rsHVT7">MusicManager.cs Script</a></p> 
+      <ul>
+         <li> Easy to add / remove songs and simple to create new methods to trigger songs for different areas (currently just has PlayMenuMusic() and PlayLevelMusic() methods).
+         <li> Quality of life methods and coroutines such as pick a random song and fade int / out music. 
+         <li> Works with the SettingsMaster for volume control.
+      </ul>
+
+      <p><u> Level Changer: </u></p>
+      <p><a target="_blank" href="https://imgur.com/a/0tTsHGo">LevelChanger.cs Script</a></p> 
+      <ul>
+         <li> Provides a scene transition for moving between levels.
+         <li> Provides a radial loading bar for scenes which will take longer to load via LoadSceneAsync.
+         <li> Easy to make due to the use of animation and triggers for the effect.
+      </ul>  
+
+      <p><u> Progress Manager / SaveData: </u></p>
+      <p><a target="_blank" href="https://imgur.com/a/3LtKiBr">ProgressManager.cs Script</a></p> 
+      <ul>
+         <li> Progress Manager is responsible for saving and loading level data.
+         <li> Works with the serializable SaveData class in conjuction with a binary formatter.
+         <li> Works with the LevelManager and UpdateLevelsLocked scripts though this functionality can easily be removed / updated for a different style of game.
+      </ul>   
+
+      <p> --- </p>
+
+      <p> I'm also happy with my PlayerMovement script. </p>
+      <p><a target="_blank" href="https://imgur.com/a/wcTPH83">PlayerMovement.cs Script</a></p>  
+      <p> This script is by far the longest of the project and works in conjuction with the HudManager script as well as the inbuilt CharacterController componenet to provide all the functionality the player needs. 
+          Its a state machine and I think it is one of the best pieces of code I've written so far. Compared to my Stick Battle player controller script it is both easier to read (and therefore update) and more efficient. Furthermore,
+          like the utility code, it is easy to modify and will be simple to intergrate into any future projects if need be. </p>
+
+      <p> One thing that I think could be improved is the UpdateHealth() method of the HudManager script. I feel like this code is rather messy, and a primary reason for this is that I got frustrated as I had been trying to make 
+          it work for several hours. The working solution basically used a load of if statements, and so while the in game effect looks good the code certainy doesn't. </p> 
+      <p><a target="_blank" href="https://imgur.com/a/5usAGMe">HudManager.cs Script</a> | 
+         <a target="_blank" href="https://gfycat.com/newearlyleafbird">Updating Health Gif</a></p>
+      <p> My basic approach was to have two parts to each health segment. The inside bit, the 'bar', would be shifted back which each health segment lost and the outline would be set to inactive. I think a refactored and better approach
+          would be to use the inbuilt UI outline component instead of a seperate game object. </p>
+
+      <p> --- </p>
+
+      <p> As for the actual game its self, in the demo scene I showcased the components that would end up in a level: </p>
+
+      <p><u> Wall Running: </u></p>
+      <p><a target="_blank" href="https://gfycat.com/heavyembellishedelephantbeetle">Wall Run Gif</a></p>
+      <p> Wall running would be a large part of Neon Dawn so it is important that the system for it worked well. My wall running script works in three stages. First, in the Update() method, raycasts are fired out to either side of 
+          the player at foot level. If the raycasts hit a wall tagged WallRunWall and the distance to said wall is less than or equal to WALL_RUN_DISTANCE then the isWallRunning bool is set to true. This means that the players y 
+          position is frozen. Finally the coroutine SmoothCameraRotate() is called, rotating the camera +/- 20 degrees depending on if the player is wall running on the right or left side. When the player leaves a wall, the camera
+          rotation is reset (once again via SmoothCameraRotate()) and the players y position is unfrozen. </p>
+
+      <p><u> Grappling: </u></p>
+      <p><a target="_blank" href="https://gfycat.com/deliciousjubilanteuropeanpolecat">Grapple Gif</a></p>
+      <p> To implement a grappling hook I followed <a target="_blank" href="https://www.youtube.com/watch?v=twMkGTqyZvI&t">Code Monkeys grappling hook tutorial</a>. It works via states and so was easy to implement into my exisiting structure as I had already decided
+          to try a state machine approach with Neon Dawn. Additions I made to Code Monkeys code include a grapple cooldown and intergration with the HudManager. </p>
+
+     
+      <p><u> Raising Walls: </u></p>
+      <p><a target="_blank" href="https://gfycat.com/silkyunlinedasp">Raising Walls Gif</a></p>
+      <p> Definitly something simple, but an important part of Neon Dawns levels nevertheless. In order to make the game more interesting the player would often find themselves stranded on rooftops, pinned down by enemy fire.
+          The combination of a button to raise walls, giving the player the cover they need to deal with the enemies, and powercubes to buy the player more time would have added a fairly unique mechanic to Neon Dawn and distanced
+          it further from existing runner style games. </p>
+
+      <p><u> Enemies: </u></p>
+      <p><a target="_blank" href="https://gfycat.com/harshimpossiblegalapagosmockingbird">Rifle Enemy Gif</a> |
+         <a target="_blank" href="https://gfycat.com/glitteringillustriousgraywolf">Sniper Enemy Gif</a></p>
+      <p> I was especially happy with the implementation of the enemies in Neon Dawn. Both the rifle and sniper enemy have the BasicEnemyBehaviour script which manages their colour, movement and collisions. Then a seperate RifleEnemy 
+          or SniperEnemy script dictates their specific behaviour. The rifle enemy simiply checks the distance between the player and itself via a raycast and if the player is both in range and not behind a wall instaniates a bullet
+          prefab (which is possible to dodge). The sniper enemy is a little more complex, first checking if it is in range and has line of site but then locking on. Once the sniper has locked on to the player they have 3 seconds 
+          to either get out of range or find cover before the sniper fires. This effect was primarily accomplished through the use of coroutines, and instead of spawning a bullet damage is dealt immediately.</p>
+
+      <p> --- </p>
+
+      <p> I mentioned in the video that Neon Dawn has taught me what my strengths and weaknesses are, and this combined with Stick Battle helping me consolidate my coding style I feel like I'm now ready to make something shippable.  </p>
+      
+
+      <footer>
+         <ul>
+            <li><a href="https://github.com/WzrdIsTaken">Github</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>
