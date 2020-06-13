@@ -30,7 +30,7 @@ and are very versatile so I will be sure to take them into my future projects. <
       <p><a target="_blank" href="https://imgur.com/a/F3vtYfI">SettingsMaster.cs Script</a></p> 
       <ul>
          <li> Stores the players data via PlayerPrefs. 
-         <li> Uses a number of static methods for easy getting / setting the values. 
+         <li> Uses a number of static methods for getting / setting the values. 
          <li> Easy intergration with all future SettingsManager (what I like to call the front end of my settings system, ie: the buttons / sliders to actually change the controls / values) scripts. 
       </ul>
 
@@ -47,7 +47,7 @@ and are very versatile so I will be sure to take them into my future projects. <
       <ul>
          <li> Provides a scene transition for moving between levels.
          <li> Provides a radial loading bar for scenes which will take longer to load via LoadSceneAsync.
-         <li> Easy to make due to the use of animation and triggers for the effect.
+         <li> Easy change the effect due to the use of animation and triggers.
       </ul>  
 
       <p><u> Progress Manager / SaveData: </u></p>
@@ -67,7 +67,7 @@ and are very versatile so I will be sure to take them into my future projects. <
           like the utility code, it is easy to modify and will be simple to intergrate into any future projects if need be. </p>
 
       <p> One thing that I think could be improved is the UpdateHealth() method of the HudManager script. I feel like this code is rather messy, and a primary reason for this is that I got frustrated as I had been trying to make 
-          it work for several hours. The working solution basically used a load of if statements, and so while the in game effect looks good the code certainy doesn't. </p> 
+          it work for several hours. The working solution uses a lot of if statements, and so while the in game effect looks good the code certainy doesn't. </p> 
       <p><a target="_blank" href="https://imgur.com/a/5usAGMe">HudManager.cs Script</a> | 
          <a target="_blank" href="https://gfycat.com/newearlyleafbird">Updating Health Gif</a></p>
       <p> My basic approach was to have two parts to each health segment. The inside bit, the 'bar', would be shifted back which each health segment lost and the outline would be set to inactive. I think a refactored and better approach
@@ -75,7 +75,7 @@ and are very versatile so I will be sure to take them into my future projects. <
 
       <p> --- </p>
 
-      <p> As for the actual game its self, in the demo scene I showcased the components that would end up in a level: </p>
+      <p> As for the actual game, in the demo scene I showcased the components that would end up in a level: </p>
 
       <p><u> Wall Running: </u></p>
       <p><a target="_blank" href="https://gfycat.com/heavyembellishedelephantbeetle">Wall Run Gif</a></p>
@@ -86,7 +86,7 @@ and are very versatile so I will be sure to take them into my future projects. <
 
       <p><u> Grappling: </u></p>
       <p><a target="_blank" href="https://gfycat.com/deliciousjubilanteuropeanpolecat">Grapple Gif</a></p>
-      <p> To implement a grappling hook I followed <a target="_blank" href="https://www.youtube.com/watch?v=twMkGTqyZvI&t">Code Monkeys grappling hook tutorial</a>. It works via states and so was easy to implement into my exisiting structure as I had already decided
+      <p> To implement a grappling hook I followed <a target="_blank" href="https://www.youtube.com/watch?v=twMkGTqyZvI&t">Code Monkeys grappling hook tutorial</a>. It works via states so was easy to implement into my exisiting structure as I had already decided
           to try a state machine approach with Neon Dawn. Additions I made to Code Monkeys code include a grapple cooldown and intergration with the HudManager. </p>
 
      
