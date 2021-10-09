@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="description" content="Wzrd's cool website.">
+	  
+	  <link rel="shortcut icon" type="image/x-icon" href="Assets\Images\Favicon\favicon.ico">
+	  
+      <link rel="stylesheet" type="text/css" href="main.css">
+      <title> Wzrd - Projects </title>
+   </head>
+   <body> 
+		<nav>
+			 <ul>
+					<li><a href="index.html">About</a></li>
+					<!-- <li><a href="about.html">About</a></li> -->
+					<li><a href="cv.html">CV</a></li>
+					<li><a href="projects.html">Projects</a></li>
+			 </ul>
+		</nav>
+		
+		<h1> Projects </h1>
+		<p> All my personal projects (ie, not stuff in my university course) - ordered from newest to oldest. </p>
+		
+		<div class="container">
+			<img src="Assets\Images\Personal Projects\WardensTeddyFullReleaseButton.png" alt="WardensTeddyButton" style="width:100%">
+			<a href="Project Pages\Wardens Teddy Full Game Project.html"> <button class="btn"></button> </a>
+		</div>
+		
+		<div class="container">
+			<img src="Assets\Images\Personal Projects\WardenTeddyButton.png" alt="WardensTeddyButton" style="width:100%">
+			<a href="Project Pages\Wardens Teddy Project.html"> <button class="btn"></button> </a>
+		</div>
+	   
+		<div class="container">
+			<img src="Assets\Images\Personal Projects\PhotonProjectButton.png" alt="PhotonProjectButton" style="width:100%">
+			<a href="Project Pages\Photon Project.html"> <button class="btn"></button> </a>
+		</div>
+	   
+		<div class="container">
+			<img src="Assets\Images\Personal Projects\GravityGrappleButton.png" alt="GravityGrappleButton" style="width:100%">
+			<a href="Project Pages\Gravity Grapple Project.html"> <button class="btn"></button> </a>
+		</div>	    
+
+		<div class="container"> 
+			<img src="Assets\Images\Personal Projects\TheHypnotistAndTheDiamondRoseButton.png" alt="DiamondRoseButton" style="width:100%">
+			<a href="Project Pages\The Hypnotist and the Diamond Rose Project.html"> <button class="btn"></button> </a>
+		</div>
+
+		<div class="container">
+			<img src="Assets\Images\Personal Projects\NeonDawnButton.png" alt="NeonDawnButton" style="width:100%">
+			<a href="Project Pages\Neon Dawn Project.html"> <button class="btn"></button> </a>
+		</div>
+
+		<div class="container">
+			<img src="Assets\Images\Personal Projects\StickBattleButton.png" alt="StickBattleButton" style="width:100%">
+			<a href="Project Pages\Stick Battle Project.html"> <button class="btn"></button> </a>
+		</div>
+		
+      <footer>
+         <ul>
+			<li><a href="https://github.com/WzrdIsTaken" target="_blank" rel="noopener noreferrer">Github</a></li>
+			<li><a href="https://wzd.itch.io/" target="_blank" rel="noopener noreferrer">Itch</a></li>
+			<li><a href="https://www.linkedin.com/in/benrosewastaken/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>
