@@ -87,3 +87,20 @@ ul.posts li {
 .container .btn:hover {
   background-color: #0000;
 }
+
+.download-btn{
+	background-color: DodgerBlue;
+	color: white;
+	padding: 1rem 2rem;
+	font-size: 2rem;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.download-btn:hover{
+	back-color: RoyalBlue;
+}
+
+div {
+    white-space: pre;
+}
