@@ -1,55 +1,88 @@
-<!DOCTYPE html>
-<html>
-   <head>
-      <meta charset="UTF-8">
-      <meta name="description" content="Ben's cool website">
-	  <meta property="og:title" content="Wzrd" />
-	  
-	  <link rel="shortcut icon" type="image/x-icon" href="Assets\Images\Favicon\favicon.ico">
-	  <!-- Repo needs to be public for this to work <meta name="cool image" property="og:image" content="https://github.com/WzrdIsTaken/WzrdIsTaken.github.io/blob/master/Assets/Images/General/Github%20Social%20Image.png" /> -->
-	 
-      <link rel="stylesheet" type="text/css" href="main.css">
-      <title> Wzrd - About </title>	  
-	  
-	  <!-- <style>
-		  body {
-			  background-image: url('Assets/Images/General/HomeBackground.png');
-			  background-repeat: no-repeat;
-			  background-attachment: fixed;  
-			  background-size: cover;
-		  }
-	  </style> -->
-	  
-   </head>
-   <body> 
-		<nav>
-			 <ul>
-					<li><a href="index.html">Projects</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="cv.html">CV</a></li>
-			 </ul>
-		</nav>
+<!DOCTYPE HTML>
 
-      <h1> About </h1>
-	  <img src="Assets\Images\General\Terence Solo 200.png" style="float:right; margin: 0px 25px 25px 0px;" alt="Terence">
-	   
-	  <p> Hi! </p>
-      <p> I'm Ben, a 19 year old Game Developer currently in the second year of my degree in at the University of the West of England, studying Games Technology BSc (Hons). </p>
-	  <p> Alongside my studies I have created a number of games and applications using various tools and languages, with my most recent project being 
-	      <a href="https://www.youtube.com/watch?v=uol5da4TVY0" target="_blank" rel="noopener noreferrer">Wardens Teddy</a> - a 2D platformer where you have to work back through the prison you
-		  once patrolled to rescue your lost friend, all while dodging traps and solving the puzzles meant for the escapees! </p>
-	  <p> Since secondary school I have been interested in computer science and creating games, the discipline allowing for both creativity and problem solving with the result being 
-	      something that can actually give others a meaningful experience. Some of my favorite games include Subnautica, The Forest and Terraria. I love multiplayer survival games that
-          give you the freedom to do what you like, while also having a challenging but attainable end goal. </p>
-	  <p> Outside of programming I enjoy running (with my current aim being to complete a marathon), swimming, stories and of course playing games! 
-	      Recently I have begun learning Korean and have so far reached an intermediate level. </p>    
-	  
-      <footer>
-         <ul>
-			<li><a href="https://github.com/WzrdIsTaken" target="_blank" rel="noopener noreferrer">Github</a></li>
-			<li><a href="https://wzd.itch.io/" target="_blank" rel="noopener noreferrer">Itch</a></li>
-			<li><a href="https://www.linkedin.com/in/benrosewastaken/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-         </ul>
-      </footer>
-   </body>
+<!--
+	About page
+-->
+
+<html>
+	<head>
+		<title>Wzrd - About</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="images\favicon\favicon.ico">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+						 <!-- Logo -->
+						 <a href="index.html" class="logo">
+						  <span class="symbol"><img src="images/general/logo.png" alt="" /></span><span class="title">Portfolio</span>
+						 </a>
+						 &nbsp&nbsp
+						 <a href="about.html" class="logo">
+						  <span class="title">About</span>
+						 </a>
+						 &nbsp&nbsp
+						 <a href="cv.html" class="logo">
+						  <span class="title">CV</span>
+						 </a>
+						</div>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>About</h1>
+							
+							<!-- Image, but its not wrapped in any of the html5 up magic so might have to remove -->
+							<img src="images\general\terence_solo.png" style="float:right; margin: 0px 15px 25px 0px;" alt="Terrance Solo">
+							
+							<p>Hi!</p>
+							<p>I'm Ben, a 19 year old Game Developer in the second year of my degree in at the University of the West of England, studying Games Technology BSc (Hons).
+                               I am currently interning at Playground Games.</p>
+							<p>I've programming with a variety of tools and languages, notably C++, C#, DirectX, OpenGL, Unity and Unreal, and in both an object oriented and data driven fashion 
+							   utilising an Entity Component System.</p>
+							<p>Alongside my studies I have created a number of tools and applications, including a full release game: 
+							   <a href="project pages/wardens_teddy_project_page.html">Wardens Teddy</a> - a 2D platformer where you have to work 
+							   back through the prison you once patrolled to rescue your lost friend, all while dodging traps and solving the puzzles meant for the escapees!</p>
+							<p>Since secondary school I have been interested in computer science and creating games, the discipline allowing for both creativity and problem solving with the 
+							   result being something that can actually give others a meaningful experience. Some of my favorite games include Subnautica, The Forest and Terraria. I love multiplayer 
+							   survival games that give you the freedom to do what you like, while also having a challenging but attainable end goal.</p>
+							<p>Outside of programming I enjoy running, swimming, reading and of course playing games! Recently I have begun learning Korean and have so far reached an intermediate level.</p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+						
+							<!-- Contact Buttons -->
+							<section>
+								<h2>Contact</h2>
+								<ul class="icons">
+									<li><a href="https://www.linkedin.com/in/benrwastaken/" target="_blank" class="icon brands style2 fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+									<li><a href="mailto:benrosewastaken@gmail.com" target="_blank" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+									<li><a href="https://github.com/WzrdIsTaken" target="_blank" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
