@@ -7,6 +7,10 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/*
+	Search for 'BACKGROUND' to change the background
+	"        " 'FOOTER COLOUR' to change the footer background colour
+*/
 
 /* My CSS */
 
@@ -52,7 +56,6 @@ footer, header, hgroup, menu, nav, section {
 	display: block;}
 
 body {
-	/* background-image: url("../../images/general/background.png"); */
 	line-height: 1;
 }
 
@@ -121,6 +124,7 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
+	/* BACKGROUND */
 	body {
 		background-image: url("../../images/general/background.png");
 		 background-repeat: no-repeat;
@@ -3201,7 +3205,7 @@ input, select, textarea {
 
 	#footer {
 		padding: 5em 0 6em 0 ;
-		background-color: #242324;
+		background-color: #242324; /* FOOTER COLOUR */
 	}
 
 		#footer > .inner {
